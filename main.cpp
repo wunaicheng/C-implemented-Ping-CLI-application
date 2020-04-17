@@ -1,6 +1,6 @@
 #include <signal.h>
 #include "ping.h"
-Ping* p;
+
 using namespace std;
 void SingnalHandler(int signo) {
 
@@ -31,7 +31,6 @@ int main(int argc, char * argv[]) {
     cout<<"... Ping Program started, to stop, please use Ctrl+C ...\n";
 
     Ping ping(argv[1], k);
-    p = &ping;
     ping.CreateSocket();
     while(true)
     {
